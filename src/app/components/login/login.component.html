@@ -1,15 +1,14 @@
 <div class="container">
   <img class="image" src="https://blog.vantagecircle.com/content/images/2022/06/motivacion-laboral-.png" alt="MotivationApp">
-  <!-- the image is momentary -->
-  <div class="form">
+  <form class="form" (submit)="login()">
     <input class="user" type="text" placeholder="User">
     <input class="password" type="password" placeholder="Password">
     <div class="buttons">
-      <button class="login">Login</button>
+      <button class="login" type="submit">Login</button>
       <button class="googleLogin">
         <img class="googleImage" src="../../../assets/google/googleLogo.png" alt="Google">
       </button>
     </div>
-  </div>
-  <span routerLink="register" class="registerTap">Don't You have an acoount?</span>
+  </form>
+  <a routerLink="/register" class="loginTap">Don't You have an acoount?</a>
 </div>
