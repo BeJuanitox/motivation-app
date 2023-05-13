@@ -1,6 +1,5 @@
 @import "/src/styles/colors";
 
-// .container,
 .form {
   display: flex;
   flex-direction: column;
@@ -13,15 +12,6 @@
   border-radius: 15px;
   border: 1px solid black;
 }
-
-// .container {
-//   width: 100%;
-//   min-height: 100vh;
-
-//   .image {
-//     width: 600px;
-//     border-radius: 40px;
-//   }
 
 .form {
   width: 500px;
@@ -50,4 +40,3 @@
   color: $buttons;
   cursor: pointer;
 }
-// }
