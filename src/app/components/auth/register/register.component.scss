@@ -1,14 +1,6 @@
 @import "/src/styles/colors";
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile,
-.signUp {
+@mixin borders {
   border-radius: 15px;
   border: 1px solid black;
 }
@@ -16,6 +8,10 @@
 .form {
   width: 500px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 
   .profile {
@@ -23,6 +19,7 @@
     height: 50px;
     font-size: 20px;
     text-align: center;
+    @include borders();
   }
 
   .signUp {
@@ -31,6 +28,7 @@
     font-size: 25px;
     background-color: $login-button;
     cursor: pointer;
+    @include borders();
   }
 }
 

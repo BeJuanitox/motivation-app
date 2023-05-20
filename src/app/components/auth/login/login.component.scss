@@ -1,28 +1,21 @@
 @import "/src/styles/colors";
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.user,
-.password,
-.login,
-.googleLogin {
+@mixin borders {
   border-radius: 15px;
   border: 1px solid black;
 }
 
-.login,
-.googleLogin {
+@mixin cursor {
   cursor: pointer;
 }
 
 .form {
   width: 500px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
 
   .user,
@@ -31,6 +24,7 @@
     height: 50px;
     font-size: 20px;
     text-align: center;
+    @include borders();
   }
 
   .buttons {
@@ -42,11 +36,18 @@
       width: 90%;
       font-size: 25px;
       background-color: $login-button;
+      @include borders();
+      @include cursor();
     }
 
-    .googleImage {
-      width: 40px;
-      padding: 5px;
+    .googleLogin {
+      @include borders();
+      @include cursor();
+
+      .googleImage {
+        width: 40px;
+        padding: 5px;
+      }
     }
   }
 }
@@ -55,5 +56,5 @@
   margin-top: 30px;
   font-size: 20px;
   color: $buttons;
-  cursor: pointer;
+  @include cursor();
 }
