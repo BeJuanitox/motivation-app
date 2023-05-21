@@ -11,13 +11,9 @@ const routes: Routes = [
     loadChildren: () => import('./components/auth/register/register.module').then( m => m.RegisterModule ),
   },
   {
-    path: '',
+    path: '**',
     redirectTo: 'login',
     pathMatch: 'full'
-  },
-  {
-    path: '**',
-    redirectTo: 'login'
   }
 ];
 
