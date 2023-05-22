@@ -1,0 +1,13 @@
+<app-auth>
+  <form class="form" (submit)="login()">
+    <input class="user" type="text" placeholder="User">
+    <input class="password" type="password" placeholder="Password">
+    <div class="buttons">
+      <button class="login" type="submit">Login</button>
+      <button class="googleLogin">
+        <img class="googleImage" src="../../../assets/google/googleLogo.png" alt="Google">
+      </button>
+    </div>
+  </form>
+  <a routerLink="/register" class="loginTap">Don't You have an account?</a>  
+</app-auth>
