@@ -1,0 +1,38 @@
+@import "/src/styles/colors";
+
+@mixin borders {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: flex-end;
+
+  .logout {
+    font-size: 15px;
+    background-color: $bk-logout;
+    color: $color-logout;
+    cursor: pointer;
+    @include borders();
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.feedContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .newActivity {
+    margin-top: 50px;
+    font-size: 25px;
+    background-color: $bk-newActivity;
+    cursor: pointer;
+    @include borders();
+  }
+}
