@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  loading = signal(false);
+
   login(){
+    this.loading.set(true);
     console.log('hello');
+    setTimeout(() => {
+      this.loading.set(false);
+    }, 2000);
   };
+
+  isLoading(): boolean {
+    return this.loading();
+  }
 
 }

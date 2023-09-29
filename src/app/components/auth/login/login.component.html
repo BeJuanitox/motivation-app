@@ -1,9 +1,18 @@
 <app-auth>
-  <form class="form" (submit)="login()">
+  <form class="form">
     <input class="user" type="text" placeholder="User">
     <input class="password" type="password" placeholder="Password">
     <div class="buttons">
-      <button class="login" type="submit">Login</button>
+      <p *ngIf="isLoading(); else loginBtn">Loading...</p>
+      <ng-template #loginBtn>
+        <button 
+          class="login" 
+          type="button"
+          (click)="login()"
+        >Login
+        </button>
+      </ng-template>
+      
       <button class="googleLogin">
         <img class="googleImage" src="../../../assets/google/googleLogo.png" alt="Google">
       </button>
