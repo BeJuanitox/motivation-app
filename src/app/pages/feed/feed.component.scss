@@ -6,24 +6,105 @@
   padding: 5px;
 }
 
-.containerButton {
+@mixin alignButtomsContent {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+@mixin InternalContentMeasurements {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+// height: 90px;
+// background-color: #65000e;
+// flex-direction: row;
+// align-items: center;
+// position: fixed;
+// top: 0;
+// left: 0;
+// z-index: 1;
+
+.profile {
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 
-  .logout {
-    font-size: 15px;
-    background-color: $bk-logout;
-    color: $color-logout;
+  .profileIcon {
+    font-size: 60px;
     cursor: pointer;
-    @include borders();
   }
 }
 
-.title {
-  text-align: center;
+.titleContent {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: $color-titles;
+
+  .title {
+    font-size: 30px;
+  }
+
+  .listIcon {
+    font-size: 35px;
+  }
 }
 
-.feedContainer {
+.activitiesList {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  .item {
+    width: 45%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    @include borders();
+
+    .activityData {
+      width: 80%;
+      @include InternalContentMeasurements();
+
+      .activityName {
+        font-size: 25px;
+      }
+
+      .frequency {
+        font-size: 15px;
+      }
+    }
+
+    .icons {
+      @include InternalContentMeasurements();
+
+      .edit {
+        color: $color-edit;
+        cursor: pointer;
+      }
+
+      .delete {
+        color: $color-delete;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.addNew {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -32,7 +113,7 @@
     margin-top: 50px;
     font-size: 25px;
     background-color: $bk-newActivity;
-    cursor: pointer;
     @include borders();
+    @include alignButtomsContent();
   }
 }
