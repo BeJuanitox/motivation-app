@@ -14,20 +14,11 @@
 }
 
 @mixin InternalContentMeasurements {
-  height: 60px;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-
-// height: 90px;
-// background-color: #65000e;
-// flex-direction: row;
-// align-items: center;
-// position: fixed;
-// top: 0;
-// left: 0;
-// z-index: 1;
 
 .profile {
   width: 100%;
@@ -38,8 +29,8 @@
   right: 10px;
   z-index: 1;
 
-  .profileIcon {
-    font-size: 60px;
+  .profileImage {
+    width: 60px;
     cursor: pointer;
   }
 }
@@ -56,19 +47,21 @@
     font-size: 30px;
   }
 
-  .listIcon {
-    font-size: 35px;
+  .fistImage {
+    width: 60px;
   }
 }
 
 .activitiesList {
   width: 100%;
+  margin-top: 20px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
 
   .item {
     width: 45%;
+    height: 100px;
     margin-top: 15px;
     display: flex;
     align-items: center;
@@ -92,12 +85,12 @@
       @include InternalContentMeasurements();
 
       .edit {
-        color: $color-edit;
+        width: 24px;
         cursor: pointer;
       }
 
       .delete {
-        color: $color-delete;
+        width: 24px;
         cursor: pointer;
       }
     }
@@ -115,5 +108,9 @@
     background-color: $bk-newActivity;
     @include borders();
     @include alignButtomsContent();
+
+    .add {
+      width: 20px;
+    }
   }
 }
