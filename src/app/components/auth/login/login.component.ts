@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private readonly router: Router) {}
 
+  apiKey = process.env['AUTH_GOOGLE_KEY'];
   loading = signal(false);
 
   ngOnInit(): void {
@@ -30,13 +31,13 @@ export class LoginComponent implements OnInit {
 
   renderButton(): void {
     google.accounts.id.initialize({
-      client_id: '756127147061-fqhrqhmm7shfavmjr9n95e3ade8n6qsk.apps.googleusercontent.com',
+      client_id: process.env['AUTH_GOOGLE_KEY'] || '',
       callback: this.handleCredentialResponse.bind(this)
     });
     const options = { 
-      theme: 'filled_black',
-      text: 'continue_with',
-      shape: 'square'
+      theme: 'outline',
+      text: 'signin',
+      shape: 'rectangular'
     };
 
     google.accounts.id.renderButton(
@@ -48,7 +49,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleCredentialResponse(res: any): void {
-    console.log(res);
+    localStorage.setItem('google_token', res.credential);
     this.router.navigate(['/feed']);
   }
 }
