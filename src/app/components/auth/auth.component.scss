@@ -10,9 +10,9 @@
 
   .image {
     width: 300px;
-    background-color: $login-button;
+    background-color: $bk-homeLogo;
     padding: 50px;
-    border: 2px solid black;
+    border: 2px solid $border;
     border-radius: 40px;
   }
 }
