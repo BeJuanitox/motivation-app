@@ -2,8 +2,8 @@
   Temporary Palette
 #407C87 - Dark
 #A5DBDD - Lighter
+#D3E1E2 - More Lighter
 #EEF1F6 - White
-#D3E1E2 - Gray type
 */
 
 // Home Logo
@@ -17,4 +17,7 @@ $buttons: #407C87;
 // Feed
 $color-titles: #407C87;
 $bk-logout: #D3E1E2;
-$bk-newActivity: #A5DBDD;
+$bk-buttons: #D3E1E2;
+
+// New Activity
+$bk-window: #EEF1F6;
