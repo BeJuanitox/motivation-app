@@ -1,0 +1,38 @@
+@import "/src/styles/colors";
+
+.container-new {
+  overflow-y: scroll;
+
+  .close {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-title {
+    text-align: center;
+    color: $color-titles;
+  }
+
+  .container-body-new {
+    margin: 0 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .additional-selection {
+      opacity: 0.75;
+      font-size: 0.75em;
+    }
+  }
+
+  .container-save {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.container-new::-webkit-scrollbar {
+  display: none;
+}
