@@ -1,68 +1,38 @@
 @import "/src/styles/colors";
 
-// .container-new {
-//   width: 400px;
-//   height: 400px;
-//   position: fixed;
-//   top: 35%;
-//   left: 35%;
-//   background-color: $bk-window;
-//   border: 2px solid $border;
-//   border-radius: 10px;
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-evenly;
+.container-new {
+  overflow-y: scroll;
 
-//   .close {
-//     width: 100%;
-//     display: flex;
-//     justify-content: end;
-//     align-items: center;
-//   }
+  .close {
+    display: flex;
+    justify-content: flex-end;
+  }
 
-//   .header-new {
-//     width: 100%;
-//     color: $color-titles;
-//   }
+  .header-title {
+    text-align: center;
+    color: $color-titles;
+  }
 
-//   .container-body-new {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 15px;
+  .container-body-new {
+    margin: 0 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 
-//     .inputs {
-//       height: 40px;
-//     }
+    .additional-selection {
+      opacity: 0.75;
+      font-size: 0.75em;
+    }
+  }
 
-//     .example-additional-selection {
-//       opacity: 0.75;
-//       font-size: 0.75em;
-//     }
-//   }
+  .container-save {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
 
-//   .container-save {
-//     width: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     .save {
-//       width: 150px;
-//       font-size: 18px;
-//       border: 2px solid $border;
-//       border-radius: 10px;
-//       background-color: $bk-buttons;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       gap: 10px;
-
-//       .save-icon {
-//         color: blue;
-//         font-size: 25px;
-//       }
-//     }
-//   }
-// }
+.container-new::-webkit-scrollbar {
+  display: none;
+}

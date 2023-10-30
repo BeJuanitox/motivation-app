@@ -11,9 +11,6 @@ export class NewActivityModalComponent {
 
   dayList: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
-  closeWindow(): void {
-  }
-
   createNew(): void {
 
   }
